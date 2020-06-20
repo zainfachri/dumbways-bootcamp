@@ -1,0 +1,20 @@
+1. Tampilkan semua game dengan genre yang sama
+
+    SELECT * FROM game 
+    JOIN genre
+    ON game.genre_id=genre.id
+    WHERE genre.name = "action";
+
+2. Tampilkan semua data game beserta genre maupun stock yang tersisa
+
+    SELECT * FROM game 
+    JOIN genre
+    ON game.genre_id=genre.id
+    JOIN transaction
+    ON game.id = transaction.game_id
+
+3. Tambah Game
+    INSERT INTO game (title, image, genre_id) VALUES ("Tekken", "tekken.jpg", 1)
+   
+   Tambah Genre
+    INSERT INTO genre (name) VALUES ("Advanture")

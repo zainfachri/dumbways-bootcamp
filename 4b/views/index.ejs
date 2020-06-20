@@ -12,9 +12,9 @@
             <h1>DW-<span>Game Center</span></h1>
         </div>
         <div class="header-right">
-            <a href="">Add Stock</a>
-            <a href="">Add Genre</a>
-            <a href="">Add Game</a>
+            <a href="/stock">Add Stock</a>
+            <a href="/genre">Add Genre</a>
+            <a href="/game">Add Game</a>
         </div>
     </header>
 
@@ -27,10 +27,12 @@
                 <span class="genre"><%= gem.name %></span>
             </div>
             <div class="row2">
-                <span class="price"><%= gem.price %></span>
-                <span class="stock"><%= gem.stock %></span>
+                    <span class="price">Rp. <%= gem.price %></span>
+                    <span class="stock">Stock: <%= gem.stock %></span>
             </div>
-            <a href="">Buy</a>
+            <form action="/update/<%= gem.id %>" method="post">
+                <input onclick="return confirm('Apakah Anda Yakin Ingin Membeli?');" type="submit" name="buy" value="Buy">
+            </form>
         </div>
         <% }) %>
     </div>

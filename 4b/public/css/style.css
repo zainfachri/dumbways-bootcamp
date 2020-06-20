@@ -8,10 +8,16 @@ html {
     line-height: 1.7;
     letter-spacing: 1px;
 }
-  
+a{
+    text-decoration: none;
+    color: white;
+}
 body {
     background-color: #242424;
     color: #fff;
+}
+.header-left span{
+    color: red;
 }
 .header-left{
       display: inline-block;
@@ -23,7 +29,6 @@ body {
     
 }
 .header-right a {
-    text-decoration: none;
     color: #fff;
     font-size: 14px;
     background-color: red;
@@ -38,24 +43,38 @@ body {
 .card{
     padding: 20px;
     text-align: center;
-    width: 200px;
+    width: 250px;
     background-color: gray;
     display: inline-block;
     margin-right: 20px;
 }
-.row1{
-    display: inline;
+.row1, .row2{
     width: 100%;
+    display: inline-block;
 }
 .card img{
     width: 10vw;
     height: 35vh;
 }
-.card a{
+.card input{
     background-color: red;
     padding: 10px 60px;
-    text-decoration: none;
     color: #fff;
     font-size: 14px;
+}
+.add input, select{
+    margin-left: 15vw;
+    margin-bottom: 5px;
+    width: 50%;
+    padding: 10px;
+}
+.add a{
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 15vw;
+}
+.price{
+    color: red;
+    font-weight: bold;
 }
   
