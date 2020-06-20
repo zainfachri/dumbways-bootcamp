@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>DW-Game Center</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>DW-<span>Game Center</span></h1>
+        </div>
+        <div class="header-right">
+            <a href="">Add Stock</a>
+            <a href="">Add Genre</a>
+            <a href="">Add Game</a>
+        </div>
+    </header>
+
+    <div class="main">
+    <% game.forEach((gem) => { %>
+        <div class="card">
+            <img src="/images/<%= gem.image %>" alt="">
+            <div class="row1">
+                <span class="title"><%= gem.title %></span>
+                <span class="genre"><%= gem.name %></span>
+            </div>
+            <div class="row2">
+                <span class="price"><%= gem.price %></span>
+                <span class="stock"><%= gem.stock %></span>
+            </div>
+            <a href="">Buy</a>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>
