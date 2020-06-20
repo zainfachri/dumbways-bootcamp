@@ -3,8 +3,9 @@ const isPassword = (pass)=> {
     let spesial = /[!@#$%^&*(),.?":{}|<>]/g;
     let upper = /[A-Z]/;
     let lower = /[a-z]/;
+    let number = /[0-9]/;
 
-    if(pass.match(spesial) && pass.match(upper) && pass.match(lower) && pass.length >= 8){
+    if(pass.match(spesial) && pass.match(upper) && pass.match(lower) && pass.length >= 8 && pass.match(number)){
         console.log(true);
     }else{
         console.log(false);
